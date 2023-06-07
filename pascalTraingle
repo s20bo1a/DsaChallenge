@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.* ;
+
+import java.util.ArrayList;
+
+public class Solution {
+	public static ArrayList<Long> generateele(int row){
+        ArrayList<Long>temp=new ArrayList<>();
+		 long a=1;
+		 temp.add((long)1);
+	  for(int col=1;col<row;col++){
+         a=a*(row-col);
+		 a=a/col;
+		 temp.add(a);
+	  }
+       return temp;
+	}
+	public static ArrayList<ArrayList<Long>> printPascal(int n) {
+                 // Write your code here.
+      ArrayList<ArrayList<Long>>ans=new ArrayList<>();
+	    
+	     for(int i=1;i<=n;i++){
+		   ans.add(generateele(i));
+		 }
+          
+
+       return ans;
+
+	}
+}
